@@ -8,6 +8,7 @@ let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
 let scriptButtons = document.querySelectorAll(".script");
+
 let fontList = [
   "Arial",
   "Verdana",
@@ -17,6 +18,12 @@ let fontList = [
   "Courier New",
   "cursive",
 ];
+window.addEventListener("keydown", function (event) {
+  var modifier = event.ctrlKey || event.metaKey;
+  if (modifier && event.shiftKey && event.keyCode == 80) {
+    //code goes here
+  }
+});
 
 const initializer = () => {
   highlighter(alignButtons, true);
